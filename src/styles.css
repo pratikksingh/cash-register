@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #9592d6;
+  color: rgb(218, 213, 213);
+  font-weight: bolder;
+  min-width: 100%;
+  height: 100vh;
+  font-size: larger;
+}
+
+.container {
+  border: none;
+  background-color: #736ece;
+  display: flex;
+  max-width: 50%;
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+input {
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+
+  padding: 12px 20px;
+  box-sizing: border-box;
+  color: rgb(218, 213, 213);
+  font-size: large;
+  height: 6vh;
+  background-color: #9592d6;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+input:focus {
+  outline: none;
+  color: rgb(218, 213, 213);
+}
+
+h1 {
+  font-family: "Nabla", cursive;
+}
+label {
+  margin: 1rem;
+}
+
+button {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  width: 50%;
+  height: 6vh;
+  border-radius: 10px;
+  border: none;
+  background-image: linear-gradient(to right, #ecdb84, #e78c8e);
+
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+caption {
+  margin-bottom: 1rem;
+  font-weight: bolder;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+#table-change {
+  border-collapse: collapse;
+  margin: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+  table-layout: fixed;
+  text-align: left;
+}
+
+tr {
+  width: 30px;
+}
+td {
+  word-break: break-word;
+  width: 10px;
+}
+
+th {
+  border: 2px solid #9592d6;
+  padding: 1rem;
+  width: 50px;
+}
+#notes-number {
+  border: 2px solid #9592d6;
+  max-width: 50px;
+  padding: 1rem;
+}
+#availabe-notes {
+  border: 2px solid #9592d6;
+  /* width: 20%; */
+  width: 50px;
+
+  padding: 20px;
+  /* padding-left: 1rem; */
+}
+small {
+  font-size: 12px;
+}

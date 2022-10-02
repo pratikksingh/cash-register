@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cash Register Manager
+    </title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css"></link>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="container">
+      <h1>Cash Register Manager</h1>
+      
+      <label for="bill-amount">Bill Amount:</label>
+      <input type="number" id="bill-amount" min="1" max="999999" step="1"/>
+      <label for="cash-given">Cash given:</label>
+      <input type="number" id="cash-given" />
+      <button id="check-btn">Check</button>
+      <p id="err-Msg"></p>
+      <table id="table-change">
+        <caption>
+          Return Change
+        </caption>
+        <tr class="row-heading">
+          <th>No. of notes</th>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+          <td id="notes-number">-</td>
+        </tr>
+        <tr>
+          <th class="row-heading">Notes</th>
+          
+          <td id="availabe-notes">2000₹
+</td>
+          <td id="availabe-notes">500₹
+</td>
+          <td id="availabe-notes">100₹
+</td>
+          <td id="availabe-notes">20₹
+</td>
+          <td id="availabe-notes">10₹
+</td>
+          <td id="availabe-notes">5₹
+</td>
+          <td id="availabe-notes">1₹
+</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
