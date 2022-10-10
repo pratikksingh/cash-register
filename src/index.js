@@ -14,6 +14,7 @@ function clickHandler() {
   }
 
   function calculateChange(Amt) {
+    errMessage("");
     let notes = [2000, 500, 100, 20, 10, 5, 1];
     for (let i = 0; i < notes.length; i++) {
       let noOfNotes = Math.trunc(Amt / notes[i]);
@@ -22,16 +23,22 @@ function clickHandler() {
     }
   }
 
-  if (billAmt.value > 0) {
-    if (cashGiven.value > billAmt.value) {
-      errMessage("");
-      const returnAmt = cashGiven.value - billAmt.value;
-      calculateChange(returnAmt);
-    } else if (cashGiven.value < billAmt.value) {
-      errMessage("Invalid cash amount given");
-    } else if (cashGiven.value === billAmt.value) {
-      errMessage("No change has to be returned");
-    }
+  console.log("CASH", typeof parseInt(cashGiven.value));
+  console.log("Bill", typeof parseInt(billAmt.value));
+
+  if (
+    parseInt(billAmt.value) > 0 &&
+    parseInt(cashGiven.value) > parseInt(billAmt.value)
+  ) {
+    const returnAmt = parseInt(cashGiven.value) - parseInt(billAmt.value);
+    console.log("returnAmt", returnAmt);
+    calculateChange(returnAmt);
+  } else if (parseInt(cashGiven.value) < parseInt(billAmt.value)) {
+    errMessage(
+      "Cash must be atleast equal to the bill amout or greater than bill amount!"
+    );
+  } else if (parseInt(cashGiven.value) === parseInt(billAmt.value)) {
+    errMessage("No change has to be returned");
   } else {
     errMessage("Invalid Bill Amount");
   }
